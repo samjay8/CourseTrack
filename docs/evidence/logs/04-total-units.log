@@ -1,4 +1,4 @@
-Loaded 7 course(s) from sample-data\courses.csv
+Loaded 9 course(s) from sample-data\courses.csv
 Welcome to CourseTrack - Student Course Management System
 
 ================ CourseTrack Menu ================
@@ -19,7 +19,30 @@ Welcome to CourseTrack - Student Course Management System
 Enter your choice (1-11): 4
 
 --- Total Units ---
-Total units for 7 course(s): 19
+Total units for 9 course(s): 20
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 11
+
+--- Semester Summary (extra) ---
+Courses recorded : 9
+Total units      : 20
+Normal load      : 15 to 24 units
+Status           : Within the normal load (15-24 units); 4 unit(s) remaining.
 
 ================ CourseTrack Menu ================
   Required operations

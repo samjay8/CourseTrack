@@ -51,12 +51,17 @@ class CourseTest {
     }
 
     @Test
-    @DisplayName("T05 title is trimmed, spaces collapsed and converted to Title Case")
+    @DisplayName("T05 title is trimmed, spaces collapsed and converted to Title Case (small words, numerals, acronyms)")
     void titleCase() throws Exception {
-        assertEquals("Introduction To Computer Science",
-                CourseValidator.normalizeTitle("  introduction   TO computer science "));
-        assertEquals("Use Of English II", CourseValidator.normalizeTitle("use of english ii"));
-        assertEquals("\"Intro\" To Logic", CourseValidator.normalizeTitle("\"intro\" to logic"));
+        assertEquals("Introduction to Data Science",
+                CourseValidator.normalizeTitle("  introduction   TO data science "));
+        assertEquals("Set, Logic, and Algebra", CourseValidator.normalizeTitle("set, logic, AND algebra"));
+        assertEquals("Mathematical Methods I", CourseValidator.normalizeTitle("MATHEMATICAL methods i"));
+        assertEquals("Statistics for a Data Scientist", CourseValidator.normalizeTitle("statistics for a data scientist"));
+        assertEquals("SIWES I", CourseValidator.normalizeTitle("SIWES i"));
+        assertEquals("Introduction to R Programming", CourseValidator.normalizeTitle("introduction to r programming"));
+        assertEquals("Of Mice and Men", CourseValidator.normalizeTitle("of mice and men"));
+        assertEquals("\"Intro\" to Logic", CourseValidator.normalizeTitle("\"intro\" to logic"));
     }
 
     @Test

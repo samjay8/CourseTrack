@@ -1,4 +1,4 @@
-﻿.
+.
 +-- JUnit Jupiter [OK]
 | +-- ConsoleMenuTest [OK]
 | | +-- T38 add re-prompts for each invalid field until it is valid [OK]
@@ -18,10 +18,11 @@
 | | +-- T29 saving an empty list gives a header-only file that loads as 0 courses [OK]
 | | +-- T33 save replaces an existing file completely and leaves no temp files behind [OK]
 | | +-- T27 save writes a header row and one line per course [OK]
+| | +-- T45 real semester file: 9 courses, 20 units, "Set, Logic, and Algebra" survives ... [OK]
 | | +-- T34 saving into a folder that does not exist throws StorageException [OK]
 | | '-- T30 loading a missing file throws StorageException caused by FileNotFoundExcepti... [OK]
 | +-- CourseTest [OK]
-| | +-- T05 title is trimmed, spaces collapsed and converted to Title Case [OK]
+| | +-- T05 title is trimmed, spaces collapsed and converted to Title Case (small words,... [OK]
 | | +-- T02 code is trimmed, upper-cased and inner spaces removed [OK]
 | | +-- T09 equals and hashCode depend on the code only [OK]
 | | +-- T07 units text is parsed; non-numbers give a clear message [OK]
@@ -51,17 +52,17 @@
 +-- JUnit Vintage [OK]
 '-- JUnit Platform Suite [OK]
 
-Test run finished after 837 ms
+Test run finished after 883 ms
 [         7 containers found      ]
 [         0 containers skipped    ]
 [         7 containers started    ]
 [         0 containers aborted    ]
 [         7 containers successful ]
 [         0 containers failed     ]
-[        44 tests found           ]
+[        45 tests found           ]
 [         0 tests skipped         ]
-[        44 tests started         ]
+[        45 tests started         ]
 [         0 tests aborted         ]
-[        44 tests successful      ]
+[        45 tests successful      ]
 [         0 tests failed          ]
 

@@ -27,10 +27,17 @@ import java.util.List;
  */
 public class CourseManager {
 
-    /** Typical minimum credit load for one semester. */
+    /**
+     * Minimum normal credit load for one semester. Below this the summary
+     * reports an under-load.
+     */
     public static final int MIN_SEMESTER_UNITS = 15;
 
-    /** Typical maximum credit load for one semester. */
+    /**
+     * Maximum normal credit load for one semester. Above this the summary
+     * shows a warning. 15-24 is the usual range in Nigerian universities;
+     * change these two constants if the university's rule is different.
+     */
     public static final int MAX_SEMESTER_UNITS = 24;
 
     /** Courses in the order they were added (or loaded). */

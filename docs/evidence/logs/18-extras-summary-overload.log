@@ -1,4 +1,4 @@
-Loaded 7 course(s) from sample-data\courses.csv
+Loaded 9 course(s) from sample-data\courses.csv
 Welcome to CourseTrack - Student Course Management System
 
 ================ CourseTrack Menu ================
@@ -19,10 +19,10 @@ Welcome to CourseTrack - Student Course Management System
 Enter your choice (1-11): 1
 
 --- Add Course ---
-Course code (e.g. COS201): PHY201
-Course title: physics for computing
+Course code (e.g. COS201): STA201
+Course title: probability and statistics i
 Units (1-6): 6
-Added: PHY201 - Physics For Computing (6 units)
+Added: STA201 - Probability and Statistics I (6 units)
 
 ================ CourseTrack Menu ================
   Required operations
@@ -42,10 +42,10 @@ Added: PHY201 - Physics For Computing (6 units)
 Enter your choice (1-11): 11
 
 --- Semester Summary (extra) ---
-Courses recorded : 8
-Total units      : 25
+Courses recorded : 10
+Total units      : 26
 Normal load      : 15 to 24 units
-Status           : WARNING: 25 units is above the maximum load of 24 by 1 unit(s).
+Status           : WARNING: 26 units is above the maximum load of 24 by 2 unit(s).
 
 ================ CourseTrack Menu ================
   Required operations

@@ -29,7 +29,7 @@ class FileCourseRepositoryTest {
     private List<Course> sample() throws Exception {
         List<Course> list = new ArrayList<>();
         list.add(new Course("COS201", "Computer Programming I", 3));
-        list.add(new Course("GST201", "Entrepreneurship, Innovation And Leadership", 2));
+        list.add(new Course("GST201", "Entrepreneurship, Innovation and Leadership", 2));
         list.add(new Course("MTH201", "The \"Hard\" Maths", 3));
         return list;
     }
@@ -51,12 +51,12 @@ class FileCourseRepositoryTest {
         Path file = tempDir.resolve("courses.csv");
         repo.save(file, sample());
         List<String> lines = Files.readAllLines(file, StandardCharsets.UTF_8);
-        assertEquals("GST201,\"Entrepreneurship, Innovation And Leadership\",2", lines.get(2));
+        assertEquals("GST201,\"Entrepreneurship, Innovation and Leadership\",2", lines.get(2));
         assertEquals("MTH201,\"The \"\"Hard\"\" Maths\",3", lines.get(3));
 
         LoadResult result = repo.load(file);
         assertEquals(0, result.getSkippedCount());
-        assertEquals("Entrepreneurship, Innovation And Leadership", result.getCourses().get(1).getTitle());
+        assertEquals("Entrepreneurship, Innovation and Leadership", result.getCourses().get(1).getTitle());
         assertEquals("The \"Hard\" Maths", result.getCourses().get(2).getTitle());
         assertEquals(sample(), result.getCourses());
     }
@@ -168,5 +168,25 @@ class FileCourseRepositoryTest {
         assertEquals(first.getAll(), second.getAll());
         assertEquals(first.totalUnits(), second.totalUnits());
         assertEquals(file, second.getCurrentFile());
+    }
+
+    @Test
+    @DisplayName("T45 real semester file: 9 courses, 20 units, \"Set, Logic, and Algebra\" survives save and reload")
+    void realSemesterData() throws Exception {
+        CourseManager manager = new CourseManager(repo);
+        LoadResult loaded = manager.loadFrom(Path.of("sample-data", "courses.csv"));
+        assertEquals(0, loaded.getSkippedCount());
+        assertEquals(9, manager.size());
+        assertEquals(20, manager.totalUnits());
+        assertEquals("Set, Logic, and Algebra", manager.findByCode("MTH203").getTitle());
+
+        Path copy = tempDir.resolve("copy.csv");
+        manager.saveTo(copy);
+        assertTrue(Files.readAllLines(copy).contains("MTH203,\"Set, Logic, and Algebra\",2"));
+        CourseManager reloaded = new CourseManager(repo);
+        reloaded.loadFrom(copy);
+        assertEquals(manager.getAll(), reloaded.getAll());
+        assertEquals("Set, Logic, and Algebra", reloaded.findByCode("MTH203").getTitle());
+        assertEquals(20, reloaded.totalUnits());
     }
 }

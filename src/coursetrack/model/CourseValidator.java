@@ -23,8 +23,15 @@ public final class CourseValidator {
     /** Longest title we accept, so the table output stays readable. */
     public static final int MAX_TITLE_LENGTH = 60;
 
-    /** Roman numerals I to X, so "use of english ii" becomes "Use Of English II". */
+    /** Roman numerals I to X, so "use of english ii" becomes "Use of English II". */
     private static final String ROMAN_NUMERAL = "(?i)^(i{1,3}|iv|v|vi{1,3}|ix|x)$";
+
+    /** A word typed fully in capitals, 2-5 letters long, e.g. SIWES or ICT. */
+    private static final String ACRONYM = "^[A-Z]{2,5}$";
+
+    /** Joining words kept in lower case inside a title. */
+    private static final String[] SMALL_WORDS =
+            {"a", "an", "and", "as", "at", "by", "for", "in", "of", "on", "or", "the", "to", "with"};
 
     private CourseValidator() {
         // utility class: no objects needed
@@ -53,8 +60,8 @@ public final class CourseValidator {
 
     /**
      * Normalises a course title: trims it, collapses repeated spaces and converts
-     * it to Title Case. "  introduction   to computing " becomes
-     * "Introduction To Computing".
+     * it to Title Case. "  introduction   TO data science " becomes
+     * "Introduction to Data Science".
      *
      * @param rawTitle the title as typed (may be null)
      * @return the cleaned title
@@ -73,8 +80,14 @@ public final class CourseValidator {
     }
 
     /**
-     * Converts a phrase to Title Case word by word. Roman numerals are kept in
-     * capitals so "programming ii" becomes "Programming II".
+     * Converts a phrase to Title Case word by word, with three small rules:
+     * <ol>
+     *   <li>Roman numerals stay in capitals: "programming ii" becomes "Programming II".</li>
+     *   <li>Short joining words (and, of, to ...) stay lower case unless they are
+     *       the first word: "sets, logic AND algebra i" becomes "Sets, Logic and Algebra I".</li>
+     *   <li>A word typed entirely in capitals with 2-5 letters is treated as an
+     *       acronym and kept: "SIWES i" becomes "SIWES I".</li>
+     * </ol>
      *
      * @param text a trimmed phrase with single spaces between words
      * @return the phrase in Title Case
@@ -86,6 +99,10 @@ public final class CourseValidator {
             String word = words[i];
             if (word.matches(ROMAN_NUMERAL)) {
                 result.append(word.toUpperCase());
+            } else if (i > 0 && isSmallWord(word)) {
+                result.append(word.toLowerCase());
+            } else if (word.matches(ACRONYM)) {
+                result.append(word);
             } else {
                 // capitalise the first LETTER, so "(intro)" becomes "(Intro)"
                 String lower = word.toLowerCase();
@@ -105,6 +122,17 @@ public final class CourseValidator {
             }
         }
         return result.toString();
+    }
+
+    /** @return true for joining words that stay lower case inside a title */
+    private static boolean isSmallWord(String word) {
+        String lower = word.toLowerCase();
+        for (String small : SMALL_WORDS) {
+            if (small.equals(lower)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /**

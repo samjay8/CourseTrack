@@ -26,7 +26,7 @@ run 03-search                sample-data/courses.csv
 run 04-total-units           sample-data/courses.csv
 run 05-save                  sample-data/courses.csv
 run 06-load
-run 07-exit-unsaved          sample-data/courses.csv
+run 07-exit-unsaved
 run 08-invalid-menu
 run 09-field-validation
 run 10-empty-list

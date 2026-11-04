@@ -18,10 +18,10 @@ Welcome to CourseTrack - Student Course Management System
 Enter your choice (1-11): 1
 
 --- Add Course ---
-Course code (e.g. COS201): COS209
-Course title: web technologies
+Course code (e.g. COS201): dts 201
+Course title: introduction to data science
 Units (1-6): 2
-Added: COS209 - Web Technologies (2 units)
+Added: DTS201 - Introduction to Data Science (2 units)
 
 ================ CourseTrack Menu ================
   Required operations
@@ -64,7 +64,7 @@ Enter your choice (1-11): 6
 --- Load from File ---
 You have unsaved changes that will be replaced. Continue? (y/n): y
 File name [courses.csv]: sample-data/courses.csv
-Loaded 7 course(s) from sample-data\courses.csv.
+Loaded 9 course(s) from sample-data\courses.csv.
 
 ================ CourseTrack Menu ================
   Required operations

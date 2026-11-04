@@ -1,8 +1,10 @@
 code,title,units
+ENT211,Entrepreneurship and Innovation,2
+MTH201,Mathematical Methods I,2
 COS201,Computer Programming I,3
-COS203,Discrete Structures,3
-COS205,Introduction To Software Engineering,2
-MTH201,Mathematical Methods I,3
-MTH203,Linear Algebra I,3
-GST201,"Entrepreneurship, Innovation And Leadership",2
-STA201,Statistics For Physical Sciences,3
+COS203,Discrete Structures,2
+DTS201,Introduction to Data Science,2
+DTS211,Introduction to R Programming,2
+MTH203,"Set, Logic, and Algebra",2
+MTH209,Introduction to Numerical Analysis,2
+DTS299,SIWES I,3

@@ -156,7 +156,7 @@ class CourseManagerTest {
         addSample();
         Course updated = manager.updateCourse("gst201", "entrepreneurship and innovation", 3);
         assertEquals("GST201", updated.getCode());
-        assertEquals("Entrepreneurship And Innovation", manager.findByCode("GST201").getTitle());
+        assertEquals("Entrepreneurship and Innovation", manager.findByCode("GST201").getTitle());
         assertEquals(9, manager.totalUnits());
         assertThrows(CourseNotFoundException.class, () -> manager.updateCourse("PHY101", "X", 2));
         assertThrows(InvalidCourseException.class, () -> manager.updateCourse("COS201", "X", 9));
@@ -181,7 +181,7 @@ class CourseManagerTest {
         assertEquals(8, s.totalUnits());
         assertTrue(s.isUnderMinimum());
         for (int i = 0; i < 4; i++) {
-            manager.addCourse(new Course("CSC30" + i, "Extra", 6));   // +24 units
+            manager.addCourse(new Course("CSC30" + i, "Extra", 6));   // +24 units = 32
         }
         s = manager.getSummary();
         assertTrue(s.isOverLimit());

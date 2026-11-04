@@ -22,18 +22,18 @@ Course code (e.g. COS201): cs 21
   [!] Invalid course code "cs 21". Use 3 letters followed by 3 digits, e.g. COS201.
 Course code (e.g. COS201): cos2011
   [!] Invalid course code "cos2011". Use 3 letters followed by 3 digits, e.g. COS201.
-Course code (e.g. COS201): cos 202
+Course code (e.g. COS201): cos 203
 Course title:    
   [!] Course title cannot be empty.
-Course title: data structures
-Units (1-6): three
-  [!] Units must be a whole number, but "three" is not.
+Course title: discrete   structures
+Units (1-6): two
+  [!] Units must be a whole number, but "two" is not.
 Units (1-6): 0
   [!] Units must be between 1 and 6, but 0 was given.
 Units (1-6): 9
   [!] Units must be between 1 and 6, but 9 was given.
-Units (1-6): 3
-Added: COS202 - Data Structures (3 units)
+Units (1-6): 2
+Added: COS203 - Discrete Structures (2 units)
 
 ================ CourseTrack Menu ================
   Required operations

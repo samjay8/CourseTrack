@@ -1,4 +1,3 @@
-Loaded 7 course(s) from sample-data\courses.csv
 Welcome to CourseTrack - Student Course Management System
 
 ================ CourseTrack Menu ================
@@ -19,10 +18,10 @@ Welcome to CourseTrack - Student Course Management System
 Enter your choice (1-11): 1
 
 --- Add Course ---
-Course code (e.g. COS201): GST203
-Course title: use of english ii
+Course code (e.g. COS201): ent 211
+Course title: entrepreneurship AND innovation
 Units (1-6): 2
-Added: GST203 - Use Of English II (2 units)
+Added: ENT211 - Entrepreneurship and Innovation (2 units)
 
 ================ CourseTrack Menu ================
   Required operations
@@ -44,6 +43,6 @@ Enter your choice (1-11): 7
 You have unsaved changes. Save before exiting? (y/n): maybe
   [!] Please answer y or n.
 You have unsaved changes. Save before exiting? (y/n): y
-File name [sample-data\courses.csv]: docs/evidence/output/exit-save.csv
-Saved 8 course(s) to docs\evidence\output\exit-save.csv.
+File name [courses.csv]: docs/evidence/output/exit-save.csv
+Saved 1 course(s) to docs\evidence\output\exit-save.csv.
 Goodbye!

@@ -22,7 +22,7 @@ File name [courses.csv]: sample-data/corrupted.csv
 Loaded 3 course(s) from sample-data\corrupted.csv.
 Skipped 6 invalid line(s):
   - Line 3: Invalid course code "CS21". Use 3 letters followed by 3 digits, e.g. COS201.
-  - Line 4: Units must be a whole number, but "three" is not.
+  - Line 4: Units must be a whole number, but "two" is not.
   - Line 6: expected 3 fields but found 2
   - Line 7: duplicate code COS201
   - Line 8: a quoted field is not closed

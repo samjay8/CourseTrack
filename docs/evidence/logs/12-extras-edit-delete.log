@@ -1,4 +1,4 @@
-Loaded 7 course(s) from sample-data\courses.csv
+Loaded 9 course(s) from sample-data\courses.csv
 Welcome to CourseTrack - Student Course Management System
 
 ================ CourseTrack Menu ================
@@ -19,12 +19,12 @@ Welcome to CourseTrack - Student Course Management System
 Enter your choice (1-11): 8
 
 --- Edit Course (extra) ---
-Code of the course to edit: cos205
-Editing: COS205 - Introduction To Software Engineering (2 units)
+Code of the course to edit: mth203
+Editing: MTH203 - Set, Logic, and Algebra (2 units)
 (Press Enter to keep the current value.)
-New title [Introduction To Software Engineering]: introduction to software engineering and design
-New units [2]: 3
-Updated: COS205 - Introduction To Software Engineering And Design (3 units)
+New title [Set, Logic, and Algebra]: set,   logic, AND algebra
+New units [2]: 
+Updated: MTH203 - Set, Logic, and Algebra (2 units)
 
 ================ CourseTrack Menu ================
   Required operations
@@ -44,9 +44,9 @@ Updated: COS205 - Introduction To Software Engineering And Design (3 units)
 Enter your choice (1-11): 9
 
 --- Delete Course (extra) ---
-Code of the course to delete: GST201
-Delete GST201 - Entrepreneurship, Innovation And Leadership (2 units)? (y/n): y
-Deleted GST201.
+Code of the course to delete: ENT211
+Delete ENT211 - Entrepreneurship and Innovation (2 units)? (y/n): y
+Deleted ENT211.
 
 ================ CourseTrack Menu ================
   Required operations

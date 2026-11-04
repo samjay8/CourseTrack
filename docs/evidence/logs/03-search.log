@@ -1,4 +1,4 @@
-Loaded 7 course(s) from sample-data\courses.csv
+Loaded 9 course(s) from sample-data\courses.csv
 Welcome to CourseTrack - Student Course Management System
 
 ================ CourseTrack Menu ================
@@ -20,7 +20,7 @@ Enter your choice (1-11): 3
 
 --- Search Course by Code ---
 Enter course code to search: mth 201
-Found: MTH201 - Mathematical Methods I (3 units)
+Found: MTH201 - Mathematical Methods I (2 units)
 
 ================ CourseTrack Menu ================
   Required operations

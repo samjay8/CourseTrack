@@ -19,7 +19,7 @@ Enter your choice (1-11): 6
 
 --- Load from File ---
 File name [courses.csv]: sample-data/courses.csv
-Loaded 7 course(s) from sample-data\courses.csv.
+Loaded 9 course(s) from sample-data\courses.csv.
 
 ================ CourseTrack Menu ================
   Required operations

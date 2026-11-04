@@ -1,4 +1,4 @@
-Loaded 7 course(s) from sample-data\courses.csv
+Loaded 9 course(s) from sample-data\courses.csv
 Welcome to CourseTrack - Student Course Management System
 
 ================ CourseTrack Menu ================
@@ -19,17 +19,19 @@ Welcome to CourseTrack - Student Course Management System
 Enter your choice (1-11): 2
 
 --- All Courses ---
-No.  Code     Title                                       Units
----------------------------------------------------------------
-1.   COS201   Computer Programming I                          3
-2.   COS203   Discrete Structures                             3
-3.   COS205   Introduction To Software Engineering            2
-4.   MTH201   Mathematical Methods I                          3
-5.   MTH203   Linear Algebra I                                3
-6.   GST201   Entrepreneurship, Innovation And Leadership     2
-7.   STA201   Statistics For Physical Sciences                3
----------------------------------------------------------------
-              7 course(s)   Total units:                     19
+No.  Code     Title                              Units
+------------------------------------------------------
+1.   ENT211   Entrepreneurship and Innovation        2
+2.   MTH201   Mathematical Methods I                 2
+3.   COS201   Computer Programming I                 3
+4.   COS203   Discrete Structures                    2
+5.   DTS201   Introduction to Data Science           2
+6.   DTS211   Introduction to R Programming          2
+7.   MTH203   Set, Logic, and Algebra                2
+8.   MTH209   Introduction to Numerical Analysis     2
+9.   DTS299   SIWES I                                3
+------------------------------------------------------
+              9 course(s)   Total units:            20
 
 ================ CourseTrack Menu ================
   Required operations
