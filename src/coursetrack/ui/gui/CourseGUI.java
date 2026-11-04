@@ -303,7 +303,11 @@ public class CourseGUI extends JFrame {
 
     // ------------------------------------------------------------------ helpers
 
-    /** Loads a file at start-up (used by Main when a file name is given). */
+    /**
+     * Loads a file at start-up (used by Main when a file name is given).
+     *
+     * @param file the CSV file to load
+     */
     public void loadAtStartup(Path file) {
         try {
             LoadResult result = manager.loadFrom(file);
