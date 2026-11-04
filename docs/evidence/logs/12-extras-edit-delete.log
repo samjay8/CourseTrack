@@ -1,0 +1,70 @@
+Loaded 7 course(s) from sample-data\courses.csv
+Welcome to CourseTrack - Student Course Management System
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 8
+
+--- Edit Course (extra) ---
+Code of the course to edit: cos205
+Editing: COS205 - Introduction To Software Engineering (2 units)
+(Press Enter to keep the current value.)
+New title [Introduction To Software Engineering]: introduction to software engineering and design
+New units [2]: 3
+Updated: COS205 - Introduction To Software Engineering And Design (3 units)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 9
+
+--- Delete Course (extra) ---
+Code of the course to delete: GST201
+Delete GST201 - Entrepreneurship, Innovation And Leadership (2 units)? (y/n): y
+Deleted GST201.
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 7
+
+You have unsaved changes. Save before exiting? (y/n): n
+Changes discarded.
+Goodbye!

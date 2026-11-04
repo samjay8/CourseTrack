@@ -67,26 +67,6 @@ No.  Code     Title                                       Units
   10. Sort / View Courses By...
   11. Semester Summary
 ==================================================
-Enter your choice (1-11): 4
-
---- Total Units ---
-Total units for 8 course(s): 22
-
-================ CourseTrack Menu ================
-  Required operations
-   1. Add Course
-   2. View All Courses
-   3. Search Course by Code
-   4. Compute Total Units
-   5. Save to File
-   6. Load from File
-   7. Exit Program
-  Extra operations
-   8. Edit Course
-   9. Delete Course
-  10. Sort / View Courses By...
-  11. Semester Summary
-==================================================
 Enter your choice (1-11): 7
 
 Goodbye!

@@ -1,0 +1,69 @@
+Loaded 7 course(s) from sample-data\courses.csv
+Welcome to CourseTrack - Student Course Management System
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 1
+
+--- Add Course ---
+Course code (e.g. COS201): PHY201
+Course title: physics for computing
+Units (1-6): 6
+Added: PHY201 - Physics For Computing (6 units)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 11
+
+--- Semester Summary (extra) ---
+Courses recorded : 8
+Total units      : 25
+Normal load      : 15 to 24 units
+Status           : WARNING: 25 units is above the maximum load of 24 by 1 unit(s).
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 7
+
+You have unsaved changes. Save before exiting? (y/n): n
+Changes discarded.
+Goodbye!

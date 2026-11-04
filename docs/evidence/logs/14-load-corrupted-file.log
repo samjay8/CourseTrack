@@ -1,0 +1,48 @@
+Welcome to CourseTrack - Student Course Management System
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 6
+
+--- Load from File ---
+File name [courses.csv]: sample-data/corrupted.csv
+Loaded 3 course(s) from sample-data\corrupted.csv.
+Skipped 6 invalid line(s):
+  - Line 3: Invalid course code "CS21". Use 3 letters followed by 3 digits, e.g. COS201.
+  - Line 4: Units must be a whole number, but "three" is not.
+  - Line 6: expected 3 fields but found 2
+  - Line 7: duplicate code COS201
+  - Line 8: a quoted field is not closed
+  - Line 9: Units must be between 1 and 6, but 9 was given.
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 7
+
+Goodbye!

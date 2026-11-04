@@ -15,10 +15,11 @@ Welcome to CourseTrack - Student Course Management System
   10. Sort / View Courses By...
   11. Semester Summary
 ==================================================
-Enter your choice (1-11): 3
+Enter your choice (1-11): 5
 
---- Search Course by Code ---
-There are no courses to search. Add or load courses first.
+--- Save to File ---
+The list is empty. Save an empty file anyway? (y/n): n
+Save cancelled.
 
 ================ CourseTrack Menu ================
   Required operations
@@ -55,11 +56,10 @@ Total units: 0 (no courses recorded yet)
   10. Sort / View Courses By...
   11. Semester Summary
 ==================================================
-Enter your choice (1-11): 5
+Enter your choice (1-11): 3
 
---- Save to File ---
-The list is empty. Save an empty file anyway? (y/n): n
-Save cancelled.
+--- Search Course by Code ---
+There are no courses to search. Add or load courses first.
 
 ================ CourseTrack Menu ================
   Required operations

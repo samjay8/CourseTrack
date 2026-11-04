@@ -31,5 +31,10 @@ run 08-invalid-menu
 run 09-field-validation
 run 10-empty-list
 run 11-load-unsaved-warning
-run 12-extras                sample-data/courses.csv
+run 12-extras-edit-delete    sample-data/courses.csv
 run 13-round-trip
+run 14-load-corrupted-file
+run 15-load-missing-file
+run 16-duplicate-code        sample-data/courses.csv
+run 17-extras-sort           sample-data/courses.csv
+run 18-extras-summary-overload sample-data/courses.csv

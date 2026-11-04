@@ -81,36 +81,6 @@ Loaded 7 course(s) from sample-data\courses.csv.
   10. Sort / View Courses By...
   11. Semester Summary
 ==================================================
-Enter your choice (1-11): 2
-
---- All Courses ---
-No.  Code     Title                                       Units
----------------------------------------------------------------
-1.   COS201   Computer Programming I                          3
-2.   COS203   Discrete Structures                             3
-3.   COS205   Introduction To Software Engineering            2
-4.   MTH201   Mathematical Methods I                          3
-5.   MTH203   Linear Algebra I                                3
-6.   GST201   Entrepreneurship, Innovation And Leadership     2
-7.   STA201   Statistics For Physical Sciences                3
----------------------------------------------------------------
-              7 course(s)   Total units:                     19
-
-================ CourseTrack Menu ================
-  Required operations
-   1. Add Course
-   2. View All Courses
-   3. Search Course by Code
-   4. Compute Total Units
-   5. Save to File
-   6. Load from File
-   7. Exit Program
-  Extra operations
-   8. Edit Course
-   9. Delete Course
-  10. Sort / View Courses By...
-  11. Semester Summary
-==================================================
 Enter your choice (1-11): 7
 
 Goodbye!
