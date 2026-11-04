@@ -1,6 +1,6 @@
 # CourseTrack: Student Course Management System
 
-**Samuel Ojetunde** · B.Sc. Data Science, Year 2 · **COS 201 — Computer Programming I** · MIVA Open University<br>
+**Samuel Ojetunde** · B.Sc. Data Science, 200 Level, 1st Semester · **COS 201 — Computer Programming I** · MIVA Open University<br>
 Mid-Semester Lab Assessment · Source code: <https://github.com/samjay8/CourseTrack>
 
 ## 1. What the system does

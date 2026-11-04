@@ -6,14 +6,14 @@
 
 **COS 201 — Computer Programming I · Mid-Semester Lab Assessment**
 
-Built by **Samuel Ojetunde** · B.Sc. Data Science, Year 2 · MIVA Open University
+Built by **Samuel Ojetunde** · B.Sc. Data Science, 200 Level, 1st Semester · MIVA Open University
 
 [![Java 17](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)](#-getting-started)
 [![Swing GUI](https://img.shields.io/badge/GUI-Swing-5382A1?style=for-the-badge)](#-screenshots)
 [![JUnit 5](https://img.shields.io/badge/Tests-45%20passing-25A162?style=for-the-badge&logo=junit5&logoColor=white)](docs/testing.md)
 [![No frameworks](https://img.shields.io/badge/Build-plain%20javac-555555?style=for-the-badge)](#-getting-started)
 
-[Overview](#-overview) · [Features](#-features) · [Getting Started](#-getting-started) · [Project Structure](#-project-structure) · [Screenshots](#-screenshots) · [Checklist](#-assessment-requirement-checklist)
+[Overview](#-overview) · [Features](#-features) · [Getting Started](#-getting-started) · [Project Structure](#-project-structure) · [Screenshots](#-screenshots)
 
 </div>
 
@@ -176,52 +176,6 @@ All screenshots are real captures of the program running on Windows 11 with Java
 
 More GUI captures (invalid units, add, search dialog, summary, sort, file chooser, after load) are in [`docs/screenshots/`](docs/screenshots/).
 
-## ✅ Assessment Requirement Checklist
-
-### From the brief
-
-| # | Requirement | Where it is satisfied | Evidence |
-|---|---|---|---|
-| 1.1 | Add courses (code, title, unit) | [`ConsoleMenu.addCourse`](src/coursetrack/ui/console/ConsoleMenu.java#L138), [`CourseManager.addCourse`](src/coursetrack/service/CourseManager.java#L64), [`Course`](src/coursetrack/model/Course.java) | C01, T12, T38 |
-| 1.2 | Store courses in a manageable structure | `ArrayList<Course>` in [`CourseManager`](src/coursetrack/service/CourseManager.java) | T12, T14 |
-| 1.3 | Display all courses clearly | [`ConsoleMenu.printTable`](src/coursetrack/ui/console/ConsoleMenu.java#L169), GUI `JTable` | C02 |
-| 1.4 | Search by code | [`CourseManager.findByCode`](src/coursetrack/service/CourseManager.java#L123) | C03, T15-T18 |
-| 1.5 | Calculate total units | [`CourseManager.totalUnits`](src/coursetrack/service/CourseManager.java#L159) | C04 (20 units), T19 |
-| 1.6 | Save to a file | [`FileCourseRepository.save`](src/coursetrack/storage/FileCourseRepository.java#L51) | C05, T27-T29 |
-| 1.7 | Load from a file | [`FileCourseRepository.load`](src/coursetrack/storage/FileCourseRepository.java#L104) | C06, C13, T30-T32 |
-| 2.1 | Classes and objects | 17 classes, interfaces, enums and records in 7 packages; [class diagram](docs/design.md#2-architecture-and-class-diagram) | T01-T11 |
-| 2.2 | Methods for operations | One method per operation in [`ConsoleMenu`](src/coursetrack/ui/console/ConsoleMenu.java) and [`CourseManager`](src/coursetrack/service/CourseManager.java) | [design §4](docs/design.md#4-operations-algorithm-pseudocode-and-flowchart) |
-| 2.3 | Decision making for menu selection | `switch` in [`ConsoleMenu.handleChoice`](src/coursetrack/ui/console/ConsoleMenu.java#L118) | C08, T37 |
-| 2.4 | Handling invalid input | [`readChoice`](src/coursetrack/ui/console/ConsoleMenu.java#L378), [`readValid`](src/coursetrack/ui/console/ConsoleMenu.java#L404), [`readYesNo`](src/coursetrack/ui/console/ConsoleMenu.java#L415) | C08, C09, T37, T38 |
-| 2.5 | String processing (trim, casing, validation) | [`CourseValidator`](src/coursetrack/model/CourseValidator.java): [`normalizeCode`](src/coursetrack/model/CourseValidator.java#L48), [`toTitleCase`](src/coursetrack/model/CourseValidator.java#L95), [`parseUnits`](src/coursetrack/model/CourseValidator.java#L145) | T02-T07, C09 |
-| 2.6 | Clean, structured style | Layered packages, Javadoc, single-purpose methods | [design §2](docs/design.md#2-architecture-and-class-diagram) |
-| 3.1 | Iteration (loops) | menu `while` loop in [`run`](src/coursetrack/ui/console/ConsoleMenu.java#L76); `for` loops in `printTable`, `toTitleCase`; `while` read loop in `load` | C02 |
-| 3.2 | Recursion | [`indexOf`](src/coursetrack/service/CourseManager.java#L142), [`sumUnits`](src/coursetrack/service/CourseManager.java#L170), [`readChoice`](src/coursetrack/ui/console/ConsoleMenu.java#L378) | [design §5](docs/design.md#5-recursion-base-cases-recursive-cases-and-traces), T15-T20 |
-| 3.3 | Error handling with exceptions | [`exception/`](src/coursetrack/exception/) hierarchy; `try/catch` in both UIs | [design §7](docs/design.md#7-exceptions-and-edge-conditions) |
-| 3.4 | File reading and writing | `BufferedReader`/`BufferedWriter` with try-with-resources in [`FileCourseRepository`](src/coursetrack/storage/FileCourseRepository.java) | T27-T36, T45 |
-| 3.5 | GUI or organised console | [`ConsoleMenu`](src/coursetrack/ui/console/ConsoleMenu.java) and [`CourseGUI`](src/coursetrack/ui/gui/CourseGUI.java) | Screenshots above |
-| 4.1-4.7 | Operations 1-7 | Menu options 1-7 in [`printMenu` / `handleChoice`](src/coursetrack/ui/console/ConsoleMenu.java#L118); GUI buttons 1-7 | C01-C07 |
-| S1 | All source code files | [`src/`](src/), [`test/`](test/) | |
-| S2 | Screenshot of the program running | [`docs/screenshots/`](docs/screenshots/) (18 console + 13 GUI) | |
-| S3 | 1-2 page report: what it does, how features work, challenges/error handling, where recursion is used | [`docs/report.pdf`](docs/report.pdf) | |
-
-### From the lecturer's feedback on earlier labs
-
-| Feedback point | How this submission addresses it | Where |
-|---|---|---|
-| Missing supporting documentation | README, design, testing and report documents | [Documentation table](#-documentation) |
-| Missing problem definition | Inputs, outputs, processing, constraints | [design §1](docs/design.md#1-problem-definition) |
-| Missing algorithm and pseudocode | Algorithm and pseudocode for the menu and all 7 operations | [design §4](docs/design.md#4-operations-algorithm-pseudocode-and-flowchart) |
-| Missing flowchart | 8 flowcharts + class diagram, in Mermaid and as PNG | [design §4](docs/design.md#4-operations-algorithm-pseudocode-and-flowchart), [`docs/diagrams/`](docs/diagrams/) |
-| Not enough test cases with corresponding outputs | 45 automated + 18 console + 13 GUI cases, each with expected and actual output | [`docs/testing.md`](docs/testing.md) |
-| No proof the program was tested | Raw JUnit output and the real program output of every session | [`docs/evidence/`](docs/evidence/) |
-| No screenshots of execution | 31 real screenshots | [Screenshots](#-screenshots) |
-| Exceptions and edge conditions not documented | Exception hierarchy and 18 edge conditions, each linked to a test and a log | [design §7](docs/design.md#7-exceptions-and-edge-conditions) |
-| Incomplete report | 2-page report covering every point in the brief | [`docs/report.pdf`](docs/report.pdf) |
-| No explanation of structure and execution | Package table, class diagram, request flow, design decisions, Big-O | [design §2](docs/design.md#2-architecture-and-class-diagram), [§8](docs/design.md#8-design-decisions-and-trade-offs), [§9](docs/design.md#9-complexity-big-o) |
-| No evidence of each feature in operation | One log and one screenshot per operation and per error case | [testing Part 2](docs/testing.md#part-2-console-sessions-on-the-real-program) |
-| Show understanding of how and why it works | Recursion traces, trade-offs table, Javadoc comments explaining each rule | [design §5](docs/design.md#5-recursion-base-cases-recursive-cases-and-traces), [§8](docs/design.md#8-design-decisions-and-trade-offs) |
-
 ## 👤 About the Author
 
-**Samuel Ojetunde**, B.Sc. Data Science (Year 2), MIVA Open University. GitHub: [@samjay8](https://github.com/samjay8)
+**Samuel Ojetunde**, B.Sc. Data Science (200 Level, 1st Semester), MIVA Open University. GitHub: [@samjay8](https://github.com/samjay8)

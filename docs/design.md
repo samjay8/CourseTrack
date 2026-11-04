@@ -1,6 +1,6 @@
 # CourseTrack: Design Document
 
-**Author:** Samuel Ojetunde, B.Sc. Data Science (Year 2)
+**Author:** Samuel Ojetunde, B.Sc. Data Science (200 Level, 1st Semester)
 **Course:** COS 201 — Computer Programming I, MIVA Open University
 **Assessment:** Mid-Semester Lab Assessment, Student Course Management Mini-System ([brief](assignment-brief.md))
 
