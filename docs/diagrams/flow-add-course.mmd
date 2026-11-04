@@ -1,0 +1,20 @@
+flowchart TD
+    S([1. Add Course]) --> C[/Read code/]
+    C --> C1[Trim, remove spaces, UPPERCASE]
+    C1 --> C2{Matches AAA999?}
+    C2 -->|no| CE[Show invalid code] --> C
+    C2 -->|yes| D{Code already recorded?<br/>recursive indexOf}
+    D -->|yes| DE[Show duplicate code error] --> END
+    D -->|no| T[/Read title/]
+    T --> T1{Blank or over 60 chars?}
+    T1 -->|yes| TE[Show error] --> T
+    T1 -->|no| T2[Trim, collapse spaces, Title Case]
+    T2 --> U[/Read units/]
+    U --> U1{Whole number?}
+    U1 -->|no: NumberFormatException| UE[Show error] --> U
+    U1 -->|yes| U2{Between 1 and 6?}
+    U2 -->|no| UE
+    U2 -->|yes| N[Create immutable Course]
+    N --> AD[Append to ArrayList<br/>unsavedChanges = true]
+    AD --> OK[Print Added: course]
+    OK --> END([Back to menu])

@@ -1,0 +1,103 @@
+classDiagram
+    direction LR
+    class Main {
+        +main(String[] args)$
+    }
+    class ConsoleMenu {
+        -CourseManager manager
+        +run()
+        -handleChoice(int) boolean
+        -readChoice(prompt, min, max) int
+        -readValid(prompt, parser) T
+        -readYesNo(prompt) boolean
+    }
+    class CourseGUI {
+        -CourseManager manager
+        -CourseTableModel tableModel
+        +loadAtStartup(Path)
+    }
+    class CourseManager {
+        -List~Course~ courses
+        -CourseRepository repository
+        -boolean unsavedChanges
+        +addCourse(Course)
+        +getAll() List~Course~
+        +getSorted(SortField) List~Course~
+        +findByCode(String) Course
+        -indexOf(code, index) int
+        +totalUnits() int
+        -sumUnits(index) int
+        +updateCourse(code, title, units) Course
+        +removeCourse(code) Course
+        +getSummary() CourseSummary
+        +saveTo(Path)
+        +loadFrom(Path) LoadResult
+    }
+    class Course {
+        -String code
+        -String title
+        -int units
+        +Course(code, title, units)
+        +fromText(code, title, units)$ Course
+        +getCode() String
+        +getTitle() String
+        +getUnits() int
+        +withTitle(String) Course
+        +compareTo(Course) int
+        +equals(Object) boolean
+        +hashCode() int
+    }
+    class CourseValidator {
+        +normalizeCode(String)$ String
+        +normalizeTitle(String)$ String
+        +toTitleCase(String)$ String
+        +parseUnits(String)$ int
+    }
+    class SortField {
+        <<enumeration>>
+        CODE
+        TITLE
+        UNITS
+    }
+    class CourseSummary {
+        <<record>>
+        courseCount
+        totalUnits
+        +isOverLimit() boolean
+        +loadStatus() String
+    }
+    class CourseRepository {
+        <<interface>>
+        +save(Path, List~Course~)
+        +load(Path) LoadResult
+    }
+    class FileCourseRepository {
+        +save(Path, List~Course~)
+        +load(Path) LoadResult
+        ~parseCsvLine(String)$ List~String~
+    }
+    class LoadResult {
+        +getCourses() List~Course~
+        +getProblems() List~String~
+    }
+    class CourseException
+    class InvalidCourseException
+    class DuplicateCourseException
+    class CourseNotFoundException
+    class StorageException
+
+    Main ..> ConsoleMenu : default
+    Main ..> CourseGUI : --gui
+    ConsoleMenu --> CourseManager
+    CourseGUI --> CourseManager
+    CourseManager "1" o-- "0..*" Course
+    CourseManager --> CourseRepository
+    CourseRepository <|.. FileCourseRepository
+    FileCourseRepository ..> LoadResult
+    CourseManager ..> CourseSummary
+    CourseManager ..> SortField
+    Course ..> CourseValidator
+    CourseException <|-- InvalidCourseException
+    CourseException <|-- DuplicateCourseException
+    CourseException <|-- CourseNotFoundException
+    CourseException <|-- StorageException

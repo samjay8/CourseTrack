@@ -1,0 +1,16 @@
+flowchart TD
+    S([5. Save to File]) --> E{List empty?}
+    E -->|yes| Q{Save an empty file anyway?}
+    Q -->|n| C[Print Save cancelled] --> END
+    Q -->|y| F
+    E -->|no| F[/Read file name, Enter = default/]
+    F --> D{Folder exists?}
+    D -->|no| SE[StorageException]
+    D -->|yes| T[Create temp file in the same folder]
+    T --> W[try-with-resources BufferedWriter:<br/>header, then one CSV line per course,<br/>quoting fields with commas or quotes]
+    W --> MV[Rename temp file over the target<br/>ATOMIC_MOVE]
+    MV --> OK[unsavedChanges = false<br/>print Saved n courses]
+    W -->|IOException| DEL[Delete temp file] --> SE
+    SE --> MSG[Print friendly error;<br/>data stays in memory]
+    OK --> END([Back to menu])
+    MSG --> END

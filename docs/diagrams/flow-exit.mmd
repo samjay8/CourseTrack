@@ -1,0 +1,11 @@
+flowchart TD
+    S([7. Exit Program]) --> U{Unsaved changes?}
+    U -->|no| BYE([Print Goodbye and stop])
+    U -->|yes| Q{Save before exiting?}
+    Q -->|not y or n| QE[Please answer y or n] --> Q
+    Q -->|n| D[Print Changes discarded] --> BYE
+    Q -->|y| F[/Read file name/]
+    F --> SV{Save succeeded?}
+    SV -->|yes| BYE
+    SV -->|no: StorageException| ST[Print error and stay in the menu<br/>so no data is lost]
+    ST --> M([Back to menu])

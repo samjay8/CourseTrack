@@ -1,0 +1,17 @@
+flowchart TD
+    S([3. Search Course by Code]) --> E{List empty?}
+    E -->|yes| EM[Print: no courses to search] --> END
+    E -->|no| R[/Read code/]
+    R --> N[Trim, remove spaces, UPPERCASE]
+    N --> V{Valid AAA999?}
+    V -->|no| VE[Print invalid code message] --> END
+    V -->|yes| CALL["indexOf(code, 0)"]
+    CALL --> B1{"index >= size?"}
+    B1 -->|"yes (base case)"| NF[return -1]
+    B1 -->|no| B2{"courses[index] has this code?"}
+    B2 -->|"yes (base case)"| F[return index]
+    B2 -->|"no (recursive case)"| REC["indexOf(code, index + 1)"] --> B1
+    NF --> NFM[CourseNotFoundException:<br/>print No course found]
+    F --> FM[Print Found: course]
+    NFM --> END([Back to menu])
+    FM --> END

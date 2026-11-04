@@ -1,0 +1,9 @@
+flowchart TD
+    S([2. View All Courses]) --> A{List empty?}
+    A -->|yes| E[Print: No courses recorded yet] --> END
+    A -->|no| W[Loop once to find the longest title<br/>and size the Title column]
+    W --> H[Print header row and rule]
+    H --> L{More courses?}
+    L -->|yes| P[printf No., code, title, units] --> L
+    L -->|no| T[Print course count and total units]
+    T --> END([Back to menu])

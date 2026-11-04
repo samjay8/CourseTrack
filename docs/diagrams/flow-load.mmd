@@ -1,0 +1,17 @@
+flowchart TD
+    S([6. Load from File]) --> U{Unsaved changes?}
+    U -->|yes| Q{Replace them?}
+    Q -->|n| C[Print Load cancelled] --> END
+    Q -->|y| F
+    U -->|no| F[/Read file name/]
+    F --> O{Open file}
+    O -->|FileNotFoundException| NF[Print File not found;<br/>current list unchanged] --> END
+    O -->|opened| L{Read next line}
+    L -->|blank, or header on line 1| L
+    L -->|data line| P[Split CSV fields, honouring quotes]
+    P --> V{3 fields, valid code, title,<br/>units and not a duplicate?}
+    V -->|yes| K[Keep course] --> L
+    V -->|no| BAD[Record Line n: reason] --> L
+    L -->|end of file| R[Replace list with the good courses<br/>unsavedChanges = false]
+    R --> REP[Print loaded count and<br/>every skipped line number]
+    REP --> END([Back to menu])

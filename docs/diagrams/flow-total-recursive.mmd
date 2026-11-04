@@ -1,0 +1,12 @@
+flowchart TD
+    S([4. Compute Total Units]) --> CALL["sumUnits(0)"]
+    CALL --> B{"index >= size?"}
+    B -->|"yes (base case)"| Z[return 0]
+    B -->|"no (recursive case)"| R["units of courses[index]<br/>+ sumUnits(index + 1)"]
+    R --> B
+    Z --> U[Each waiting call adds its units<br/>as the calls return]
+    U --> P{List was empty?}
+    P -->|yes| P0[Print Total units: 0]
+    P -->|no| P1[Print total for n courses]
+    P0 --> END([Back to menu])
+    P1 --> END

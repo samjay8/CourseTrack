@@ -1,0 +1,20 @@
+flowchart TD
+    S([Start: java coursetrack.Main]) --> A{--gui flag?}
+    A -->|yes| G[Open Swing window CourseGUI]
+    A -->|no| B[Create CourseManager with FileCourseRepository]
+    B --> M[Display menu 1-11]
+    M --> R[/Read choice/]
+    R --> V{Blank, not a number<br/>or outside 1-11?}
+    V -->|yes| E[Show error, call readChoice again] --> R
+    V -->|no| SW{switch on choice}
+    SW -->|1| O1[Add Course]
+    SW -->|2| O2[View All]
+    SW -->|3| O3[Search by Code]
+    SW -->|4| O4[Compute Total Units]
+    SW -->|5| O5[Save to File]
+    SW -->|6| O6[Load from File]
+    SW -->|8-11| OX[Extras: edit, delete, sort, summary]
+    SW -->|7| X{Safe to exit?<br/>see Exit flowchart}
+    O1 & O2 & O3 & O4 & O5 & O6 & OX --> M
+    X -->|no| M
+    X -->|yes| END([Print Goodbye and stop])
