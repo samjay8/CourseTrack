@@ -87,8 +87,18 @@ public final class CourseValidator {
             if (word.matches(ROMAN_NUMERAL)) {
                 result.append(word.toUpperCase());
             } else {
-                result.append(Character.toUpperCase(word.charAt(0)))
-                      .append(word.substring(1).toLowerCase());
+                // capitalise the first LETTER, so "(intro)" becomes "(Intro)"
+                String lower = word.toLowerCase();
+                int first = 0;
+                while (first < lower.length() && !Character.isLetter(lower.charAt(first))) {
+                    first++;
+                }
+                if (first < lower.length()) {
+                    lower = lower.substring(0, first)
+                            + Character.toUpperCase(lower.charAt(first))
+                            + lower.substring(first + 1);
+                }
+                result.append(lower);
             }
             if (i < words.length - 1) {
                 result.append(' ');
