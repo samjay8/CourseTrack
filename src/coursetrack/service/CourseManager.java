@@ -84,6 +84,14 @@ public class CourseManager {
         return Collections.unmodifiableList(copy);
     }
 
+    /**
+     * @param code an already-normalised code such as "COS201"
+     * @return true if a course with this code is recorded
+     */
+    public boolean containsCode(String code) {
+        return indexOf(code, 0) != -1;
+    }
+
     /** @return number of courses recorded */
     public int size() {
         return courses.size();
