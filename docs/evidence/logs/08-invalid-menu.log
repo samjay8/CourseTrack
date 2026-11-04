@@ -1,0 +1,50 @@
+Welcome to CourseTrack - Student Course Management System
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): abc
+  [!] "abc" is not a number. Please enter 1 to 11.
+Enter your choice (1-11): 
+  [!] Please type a number.
+Enter your choice (1-11): 0
+  [!] 0 is out of range. Please enter 1 to 11.
+Enter your choice (1-11): 15
+  [!] 15 is out of range. Please enter 1 to 11.
+Enter your choice (1-11): 2.5
+  [!] "2.5" is not a number. Please enter 1 to 11.
+Enter your choice (1-11): 4
+
+--- Total Units ---
+Total units: 0 (no courses recorded yet)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 7
+
+Goodbye!

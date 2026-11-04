@@ -1,0 +1,78 @@
+Welcome to CourseTrack - Student Course Management System
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 1
+
+--- Add Course ---
+Course code (e.g. COS201): cs 21
+  [!] Invalid course code "cs 21". Use 3 letters followed by 3 digits, e.g. COS201.
+Course code (e.g. COS201): cos2011
+  [!] Invalid course code "cos2011". Use 3 letters followed by 3 digits, e.g. COS201.
+Course code (e.g. COS201): cos 202
+Course title:    
+  [!] Course title cannot be empty.
+Course title: data structures
+Units (1-6): three
+  [!] Units must be a whole number, but "three" is not.
+Units (1-6): 0
+  [!] Units must be between 1 and 6, but 0 was given.
+Units (1-6): 9
+  [!] Units must be between 1 and 6, but 9 was given.
+Units (1-6): 3
+Added: COS202 - Data Structures (3 units)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 1
+
+--- Add Course ---
+Course code (e.g. COS201): COS202
+  [!] A course with code COS202 already exists.
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 7
+
+You have unsaved changes. Save before exiting? (y/n): n
+Changes discarded.
+Goodbye!

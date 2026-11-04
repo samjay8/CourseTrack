@@ -1,0 +1,173 @@
+Loaded 7 course(s) from sample-data\courses.csv
+Welcome to CourseTrack - Student Course Management System
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 8
+
+--- Edit Course (extra) ---
+Code of the course to edit: cos205
+Editing: COS205 - Introduction To Software Engineering (2 units)
+(Press Enter to keep the current value.)
+New title [Introduction To Software Engineering]: introduction to software engineering and design
+New units [2]: 3
+Updated: COS205 - Introduction To Software Engineering And Design (3 units)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 9
+
+--- Delete Course (extra) ---
+Code of the course to delete: GST201
+Delete GST201 - Entrepreneurship, Innovation And Leadership (2 units)? (y/n): y
+Deleted GST201.
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 10
+
+--- Sort / View Courses By (extra) ---
+  1. code
+  2. title
+  3. units (highest first)
+Sort by (1-3): 3
+Courses sorted by units (highest first):
+No.  Code     Title                                           Units
+-------------------------------------------------------------------
+1.   COS201   Computer Programming I                              3
+2.   COS203   Discrete Structures                                 3
+3.   COS205   Introduction To Software Engineering And Design     3
+4.   MTH201   Mathematical Methods I                              3
+5.   MTH203   Linear Algebra I                                    3
+6.   STA201   Statistics For Physical Sciences                    3
+-------------------------------------------------------------------
+              6 course(s)   Total units:                         18
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 1
+
+--- Add Course ---
+Course code (e.g. COS201): PHY201
+Course title: physics for computing
+Units (1-6): 6
+Added: PHY201 - Physics For Computing (6 units)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 1
+
+--- Add Course ---
+Course code (e.g. COS201): ENG201
+Course title: technical drawing
+Units (1-6): 3
+Added: ENG201 - Technical Drawing (3 units)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 11
+
+--- Semester Summary (extra) ---
+Courses recorded : 8
+Total units      : 27
+Normal load      : 15 to 24 units
+Status           : WARNING: 27 units is above the maximum load of 24 by 3 unit(s).
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 7
+
+You have unsaved changes. Save before exiting? (y/n): n
+Changes discarded.
+Goodbye!

@@ -1,0 +1,81 @@
+Welcome to CourseTrack - Student Course Management System
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 3
+
+--- Search Course by Code ---
+There are no courses to search. Add or load courses first.
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 4
+
+--- Total Units ---
+Total units: 0 (no courses recorded yet)
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 5
+
+--- Save to File ---
+The list is empty. Save an empty file anyway? (y/n): n
+Save cancelled.
+
+================ CourseTrack Menu ================
+  Required operations
+   1. Add Course
+   2. View All Courses
+   3. Search Course by Code
+   4. Compute Total Units
+   5. Save to File
+   6. Load from File
+   7. Exit Program
+  Extra operations
+   8. Edit Course
+   9. Delete Course
+  10. Sort / View Courses By...
+  11. Semester Summary
+==================================================
+Enter your choice (1-11): 7
+
+Goodbye!

@@ -38,8 +38,7 @@ public class ConsoleMenu {
 
     private static final int EXIT = 7;
     private static final int LAST_OPTION = 11;
-    private static final String TABLE_FORMAT = "%-4s %-8s %-45s %5s%n";
-    private static final String RULE = "-".repeat(65);
+    private static final int MIN_TITLE_WIDTH = 30;
 
     private final CourseManager manager;
     private final Scanner input;
@@ -163,21 +162,32 @@ public class ConsoleMenu {
         printTable(manager.getAll());
     }
 
-    /** Prints courses as an aligned table with a total row. */
+    /**
+     * Prints courses as an aligned table with a total row. The title column is
+     * as wide as the longest title, so every column lines up.
+     */
     private void printTable(List<Course> list) {
         if (list.isEmpty()) {
             out.println("No courses recorded yet. Use option 1 to add or option 6 to load.");
             return;
         }
-        out.printf(TABLE_FORMAT, "No.", "Code", "Title", "Units");
-        out.println(RULE);
+        int titleWidth = MIN_TITLE_WIDTH;
+        for (Course c : list) {
+            titleWidth = Math.max(titleWidth, c.getTitle().length());
+        }
+        // e.g. "%-4s %-8s %-36s %5s%n": '-' means left-align, the number is the width
+        String format = "%-4s %-8s %-" + titleWidth + "s %5s%n";
+        String rule = "-".repeat(4 + 1 + 8 + 1 + titleWidth + 1 + 5);
+
+        out.printf(format, "No.", "Code", "Title", "Units");
+        out.println(rule);
         int number = 1;
         for (Course c : list) {
-            out.printf(TABLE_FORMAT, number + ".", c.getCode(), c.getTitle(), c.getUnits());
+            out.printf(format, number + ".", c.getCode(), c.getTitle(), c.getUnits());
             number++;
         }
-        out.println(RULE);
-        out.printf(TABLE_FORMAT, "", "", list.size() + " course(s)   Total units:", manager.totalUnits());
+        out.println(rule);
+        out.printf(format, "", "", list.size() + " course(s)   Total units:", manager.totalUnits());
     }
 
     // ================================================================ 3. Search
